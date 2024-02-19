@@ -1,0 +1,6 @@
+@StockLink.Mail.Api_HostAddress = http://localhost:5200
+
+GET {{StockLink.Mail.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

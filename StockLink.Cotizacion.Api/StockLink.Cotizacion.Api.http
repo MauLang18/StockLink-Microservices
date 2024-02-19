@@ -1,0 +1,6 @@
+@StockLink.Cotizacion.Api_HostAddress = http://localhost:5222
+
+GET {{StockLink.Cotizacion.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,57 @@
+version: '3.4'
+
+services:
+  stocklink.auth.api:
+    image: ${DOCKER_REGISTRY-}stocklinkauthapi
+    build:
+      context: .
+      dockerfile: StockLink.Auth.Api/Dockerfile
+
+  stocklink.compra.api:
+    image: ${DOCKER_REGISTRY-}stocklinkcompraapi
+    build:
+      context: .
+      dockerfile: StockLink.Compra.Api/Dockerfile
+
+
+  stocklink.cotizacion.api:
+    image: ${DOCKER_REGISTRY-}stocklinkcotizacionapi
+    build:
+      context: .
+      dockerfile: StockLink.Cotizacion.Api/Dockerfile
+
+
+  stocklink.hubs.api:
+    image: ${DOCKER_REGISTRY-}stocklinkhubsapi
+    build:
+      context: .
+      dockerfile: StockLink.Hubs.Api/Dockerfile
+
+
+  stocklink.mail.api:
+    image: ${DOCKER_REGISTRY-}stocklinkmailapi
+    build:
+      context: .
+      dockerfile: StockLink.Mail.Api/Dockerfile
+
+
+  stocklink.reports.api:
+    image: ${DOCKER_REGISTRY-}stocklinkreportsapi
+    build:
+      context: .
+      dockerfile: StockLink.Reports.Api/Dockerfile
+
+
+  stocklink.softland.api:
+    image: ${DOCKER_REGISTRY-}stocklinksoftlandapi
+    build:
+      context: .
+      dockerfile: StockLink.Softland.Api/Dockerfile
+
+
+  stocklink.gateway.api:
+    image: ${DOCKER_REGISTRY-}stocklinkgatewayapi
+    build:
+      context: .
+      dockerfile: StockLink.Gateway.Api/Dockerfile
+

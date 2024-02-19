@@ -1,0 +1,362 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Auth/Login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.auth.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Auth/Login",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Rol",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.auth.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Rol",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Rol/Select",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.auth.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Rol/Select",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Rol/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.auth.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Rol/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Rol/Register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.auth.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Rol/Register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Rol/Edit/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.auth.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Rol/Edit/{id}",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Rol/Remove/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.auth.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Rol/Remove/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Usuario",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.auth.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Usuario",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Usuario/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.auth.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Usuario/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Usuario/User",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.auth.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Usuario/User",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Usuario/Register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.auth.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Usuario/Register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Usuario/Edit/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.auth.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Usuario/Edit/{id}",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Usuario/Remove/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.auth.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Usuario/Remove/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Articulo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.softland.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Articulo",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Cliente",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.softland.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Cliente",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Familias",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.softland.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Familias",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/CarritoCompra/Usuario",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.compra.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/CarritoCompra/Usuario",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/CarritoCompra/Register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.compra.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/CarritoCompra/Register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/CarritoCompra/Edit/Cantidad",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.compra.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/CarritoCompra/Edit/Cantidad",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/CarritoCompra/Remove/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.compra.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/CarritoCompra/Remove/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/CarritoCompra/Vendedor",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.compra.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/CarritoCompra/Vendedor",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Pedido",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.compra.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Pedido",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Pedido/Estado",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.compra.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Pedido/Estado",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Pedido/Register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.compra.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Pedido/Register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Pedido/Edit/Estado",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.compra.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Pedido/Edit/Estado",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Cotizacion/Register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.cotizacion.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Cotizacion/Register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/DetalleCotizacion/Register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.cotizacion.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/DetalleCotizacion/Register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Report/Cotizacion/{id:int}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.reports.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Report/Cotizacion/{id:int}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/hubPedido",
+      "DownstreamScheme": "ws",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.compra.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/hubPedido",
+      "QoSOptions": {
+        "TimeoutValue": 320000
+      },
+      "Priority": 50,
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 10
+      }
+    }
+  ]
+}

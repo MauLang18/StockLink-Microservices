@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "stocklink.auth.api": "StartDebugging",
+        "stocklink.compra.api": "StartDebugging",
+        "stocklink.cotizacion.api": "StartDebugging",
+        "stocklink.hubs.api": "StartDebugging",
+        "stocklink.mail.api": "StartDebugging",
+        "stocklink.reports.api": "StartDebugging",
+        "stocklink.softland.api": "StartDebugging",
+        "stocklink.gateway.api": "StartDebugging"
+      }
+    }
+  }
+}

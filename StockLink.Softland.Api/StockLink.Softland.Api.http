@@ -1,0 +1,6 @@
+@StockLink.Softland.Api_HostAddress = http://localhost:5219
+
+GET {{StockLink.Softland.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

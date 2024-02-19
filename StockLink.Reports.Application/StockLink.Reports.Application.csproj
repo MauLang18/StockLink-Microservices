@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.1.3" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.1.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StockLink.Reports.Infrastructure\StockLink.Reports.Infrastructure.csproj" />
+    <ProjectReference Include="..\StockLink.Reports.Utilities\StockLink.Reports.Utilities.csproj" />
+    <ProjectReference Include="..\StockLink.Shared.Entities\StockLink.Shared.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
