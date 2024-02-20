@@ -6,6 +6,7 @@ using StockLink.Auth.Application.Interfaces;
 using StockLink.Auth.Domain.Entities;
 using StockLink.Auth.Infrastructure.Persistences.Interfaces;
 using StockLink.Auth.Utilities.Static;
+using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -68,7 +69,7 @@ namespace StockLink.Auth.Application.Services
                 new Claim(JwtRegisteredClaimNames.GivenName, usuario.Username!),
                 new Claim(JwtRegisteredClaimNames.UniqueName, usuario.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(JwtRegisteredClaimNames.Iat, Guid.NewGuid().ToString(), ClaimValueTypes.Integer64),
+                new Claim(JwtRegisteredClaimNames.Iat, DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString())
             };
 
             var token = new JwtSecurityToken(
