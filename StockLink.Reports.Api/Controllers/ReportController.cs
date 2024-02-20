@@ -63,7 +63,8 @@ namespace StockLink.Reports.Api.Controllers
                 contenidoPlantilla = contenidoPlantilla
                     .Replace("cliente", data.Cliente)
                     .Replace("vendedor", data.Vendedor)
-                    .Replace("fecha", DateTime.Now.ToString());
+                    .Replace("fecha", DateTime.Now.ToString("dd-MM-yyyy")
+                    .Replace("descuento", data.Descuento.ToString()));
 
                 // Iterar sobre detalles y llenar la tabla
                 string detallesTabla = "";
@@ -84,11 +85,15 @@ namespace StockLink.Reports.Api.Controllers
             </tr>";
                 }
 
+                decimal descuento = data.Descuento;
+
+                decimal totalConDescuento = totalAcumulado - (totalAcumulado * (descuento / 100));
+
                 contenidoPlantilla = contenidoPlantilla
                     .Replace("<!--DetallesTabla-->", detallesTabla) // Marca en el HTML para reemplazar con detalles
-                    .Replace("total", "₡" + totalAcumulado.ToString());
+                    .Replace("total", "₡" + totalConDescuento.ToString());
 
-                nombreArchivo = $"{data.IdCotizacion}-{data.Cliente}-{DateTime.Now.ToString()}.pdf";
+                nombreArchivo = $"{data.IdCotizacion}-{data.Cliente}-{DateTime.Now.ToString("dd-MM-yyyy")}.pdf";
             }
             catch (Exception ex)
             {

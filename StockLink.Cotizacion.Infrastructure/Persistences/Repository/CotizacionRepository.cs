@@ -39,5 +39,13 @@ namespace StockLink.Cotizacion.Infrastructure.Persistences.Repository
 
             return response;
         }
+
+        public async Task<Cotizaciones> FirstCotizacionByClienteVendedor(string cliente, string vendedor, string fecha)
+        {
+            var user = await _context.Cotizacions.AsNoTracking()
+                .FirstOrDefaultAsync(x => x.Cliente!.Equals(cliente) && x.Vendedor!.Equals(vendedor) && x.Fecha.Equals(Convert.ToDateTime(fecha)));
+
+            return user!;
+        }
     }
 }

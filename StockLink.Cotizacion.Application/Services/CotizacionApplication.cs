@@ -180,5 +180,34 @@ namespace StockLink.Cotizacion.Application.Services
 
             return response;
         }
+
+        public async Task<BaseResponse<CotizacionResponseDto>> FirstCotizacionByClienteVendedor(string cliente, string vendedor, string fecha)
+        {
+            var response = new BaseResponse<CotizacionResponseDto>();
+
+            try
+            {
+                var usuario = await _unitOfWork.Cotizacion.FirstCotizacionByClienteVendedor(cliente,vendedor,fecha);
+
+                if (usuario is not null)
+                {
+                    response.IsSuccess = true;
+                    response.Data = _mapper.Map<CotizacionResponseDto>(usuario);
+                    response.Message = ReplyMessage.MESSAGE_QUERY;
+                }
+                else
+                {
+                    response.IsSuccess = false;
+                    response.Message = ReplyMessage.MESSAGE_QUERY_EMPTY;
+                }
+            }
+            catch (Exception)
+            {
+                response.IsSuccess = false;
+                response.Message = ReplyMessage.MESSAGE_EXCEPTION;
+            }
+
+            return response;
+        }
     }
 }

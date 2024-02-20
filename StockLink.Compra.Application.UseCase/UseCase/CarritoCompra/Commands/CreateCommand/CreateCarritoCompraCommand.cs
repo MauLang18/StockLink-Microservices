@@ -9,5 +9,6 @@ namespace StockLink.Compra.Application.UseCase.UseCase.CarritoCompra.Commands.Cr
         public string? DescripcionArticulo { get; set; }
         public string? Vendedor { get; set; }
         public int Cantidad { get; set; }
+        public decimal Precio { get; set; }
     }
 }

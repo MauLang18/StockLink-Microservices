@@ -301,6 +301,18 @@
       "UpstreamHttpMethod": [ "PUT" ]
     },
     {
+      "DownstreamPathTemplate": "/api/Cotizacion/First",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.cotizacion.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Cotizacion/First",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
       "DownstreamPathTemplate": "/api/Cotizacion/Register",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [

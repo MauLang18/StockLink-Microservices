@@ -10,6 +10,7 @@ namespace StockLink.Cotizacion.Application.Interfaces
     {
         Task<BaseResponse<BaseEntityResponse<CotizacionResponseDto>>> ListCotizaciones(BaseFiltersRequest filters);
         Task<BaseResponse<CotizacionResponseDto>> CotizacionById(int id);
+        Task<BaseResponse<CotizacionResponseDto>> FirstCotizacionByClienteVendedor(string cliente, string vendedor, string fecha);
         Task<BaseResponse<bool>> RegisterCotizacion(CotizacionRequestDto requestDto);
         Task<BaseResponse<bool>> EditCotizacion(int id, CotizacionRequestDto requestDto);
         Task<BaseResponse<bool>> RemoveCotizacion(int id);

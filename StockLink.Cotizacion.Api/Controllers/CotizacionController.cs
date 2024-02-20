@@ -32,6 +32,14 @@ namespace StockLink.Cotizacion.Api.Controllers
             return Ok(response);
         }
 
+        [HttpGet("First")]
+        public async Task<IActionResult> FirstCotizacionByClienteVendedor(string cliente, string vendedor, string fecha)
+        {
+            var response = await _cotizacionApplication.FirstCotizacionByClienteVendedor(cliente, vendedor, fecha);
+
+            return Ok(response);
+        }
+
         [HttpPost("Register")]
         public async Task<IActionResult> RegisterCotizacion([FromBody] CotizacionRequestDto requestDto)
         {

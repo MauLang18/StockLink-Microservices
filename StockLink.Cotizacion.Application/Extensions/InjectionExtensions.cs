@@ -22,7 +22,7 @@ namespace StockLink.Cotizacion.Application.Extensions
             services.AddScoped<ICotizacionApplication, CotizacionApplication>();
             services.AddScoped<IDetalleCotizacionApplication, DetalleCotizacionApplication>();
 
-            //services.AddScoped<IPublisherServices, PublisherServices>();
+            services.AddScoped<IPublisherServices, PublisherServices>();
 
             services.AddWatchDog();
 

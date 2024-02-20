@@ -7,5 +7,6 @@
         public string? Descripcion { get; set; }
         public string? Vendedor { get; set; }
         public int Cantidad { get; set; }
+        public decimal Precio { get; set; }
     }
 }
