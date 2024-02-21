@@ -18,7 +18,7 @@ namespace StockLink.Compra.Application.UseCase.Extensions
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
             services.AddScoped<IPublisherEmailService, PublisherEmailService>();
-            services.AddScoped<IPublisherHubService, PublisherHubService>();
+            //services.AddScoped<IPublisherHubService, PublisherHubService>();
 
             services.AddMassTransit(conf =>
             {
