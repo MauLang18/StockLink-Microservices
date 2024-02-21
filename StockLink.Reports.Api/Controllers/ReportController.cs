@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using StackExchange.Redis;
 using StockLink.Cotizacion.Application.Dtos.DetalleCotizacion.Response;
 using StockLink.Reports.Application.Interfaces;
+using System.Globalization;
 
 namespace StockLink.Reports.Api.Controllers
 {
@@ -80,7 +81,7 @@ namespace StockLink.Reports.Api.Controllers
             <tr>
                 <td>{detalle.Articulo}</td>
                 <td>{detalle.Cantidad}</td>
-                <td>₡{detalle.Precio}</td>
+                <td>₡{detalle.Precio.ToString("N2", CultureInfo.InvariantCulture)}</td>
                 <td>₡{totalDetalle}</td>
             </tr>";
                 }
@@ -90,8 +91,8 @@ namespace StockLink.Reports.Api.Controllers
                 decimal totalConDescuento = totalAcumulado - (totalAcumulado * (descuento / 100));
 
                 contenidoPlantilla = contenidoPlantilla
-                    .Replace("<!--DetallesTabla-->", detallesTabla) // Marca en el HTML para reemplazar con detalles
-                    .Replace("total", "₡" + totalConDescuento.ToString());
+                    .Replace("<!--DetallesTabla-->", detallesTabla)
+                    .Replace("total", "₡" + totalConDescuento.ToString("N2", CultureInfo.InvariantCulture));
 
                 nombreArchivo = $"{data.IdCotizacion}-{data.Cliente}-{DateTime.Now.ToString("dd-MM-yyyy")}.pdf";
             }
