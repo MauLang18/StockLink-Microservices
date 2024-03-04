@@ -4,9 +4,9 @@ using StockLink.Softland.Application.Interface.Interfaces;
 using StockLink.Softland.Application.UseCase.Commons.Bases;
 using StockLink.Softland.Utilities.Constants;
 
-namespace StockLink.Softland.Application.UseCase.UseCase.Articulo.Queries.GetAllQuery
+namespace StockLink.Softland.Application.UseCase.UseCase.Articulo.Queries.GetAllQueryFamilia
 {
-    public class GetAllArticuloFamiliaHandle : IRequestHandler<GetAllArticuloQuery, BaseResponse<IEnumerable<GetAllArticuloResponseDto>>>
+    public class GetAllArticuloFamiliaHandle : IRequestHandler<GetAllArticuloFamiliaQuery, BaseResponse<IEnumerable<GetAllArticuloResponseDto>>>
     {
         private readonly IArticuloRepository _articuloRepository;
 
@@ -15,7 +15,7 @@ namespace StockLink.Softland.Application.UseCase.UseCase.Articulo.Queries.GetAll
             _articuloRepository = articuloRepository;
         }
 
-        public async Task<BaseResponse<IEnumerable<GetAllArticuloResponseDto>>> Handle(GetAllArticuloQuery request, CancellationToken cancellationToken)
+        public async Task<BaseResponse<IEnumerable<GetAllArticuloResponseDto>>> Handle(GetAllArticuloFamiliaQuery request, CancellationToken cancellationToken)
         {
             var response = new BaseResponse<IEnumerable<GetAllArticuloResponseDto>>();
 
