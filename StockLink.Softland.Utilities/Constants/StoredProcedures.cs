@@ -4,6 +4,7 @@
     {
         #region Articulo
         public const string paListaArticulo = "paListaArticulo2";
+        public const string paListaArticuloFamilia = "paListaArticulo3";
         #endregion
 
         #region Familias

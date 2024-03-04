@@ -169,6 +169,18 @@
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
+      "DownstreamPathTemplate": "/api/Articulo/Familia",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "stocklink.softland.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/Articulo/Familia",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
       "DownstreamPathTemplate": "/api/Cliente",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
