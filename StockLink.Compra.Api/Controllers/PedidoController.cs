@@ -14,18 +14,18 @@ namespace StockLink.Compra.Api.Controllers
     {
         private readonly IMediator _mediator;
         private readonly IPublisherEmailService _publisherEmailService;
-        //private readonly IPublisherHubService _publisherHubService;
+        private readonly IPublisherHubService _publisherHubService;
 
         private string? NombreCliente;
         private string? CodigoCliente;
         private string? Observacion;
         private string? Correo;
 
-        public PedidoController(IMediator mediator, IPublisherEmailService publisherEmailService/*, IPublisherHubService publisherHubService*/)
+        public PedidoController(IMediator mediator, IPublisherEmailService publisherEmailService, IPublisherHubService publisherHubService)
         {
             _mediator = mediator;
             _publisherEmailService = publisherEmailService;
-            //_publisherHubService = publisherHubService;
+            _publisherHubService = publisherHubService;
         }
 
         [HttpGet]
@@ -61,7 +61,7 @@ namespace StockLink.Compra.Api.Controllers
         {
             var response = await _mediator.Send(command);
 
-            //await _publisherHubService.SendNotification(0, command.CodigoCliente!,command.Cliente!,command.CodigoArticulo!,command.Articulo!,command.Vendedor!,command.Cantidad,command.EstadoPedido,DateTime.Now,command.Observacion!);
+            await _publisherHubService.SendNotification(0, command.CodigoCliente!,command.Cliente!,command.CodigoArticulo!,command.Articulo!,command.Vendedor!,command.Cantidad,command.EstadoPedido,DateTime.Now,command.Observacion!);
 
             return Ok(response);
         }
@@ -71,7 +71,7 @@ namespace StockLink.Compra.Api.Controllers
         {
             var response = await _mediator.Send(command);
 
-            //await _publisherHubService.SendNotification(command.Id, "", "", "", "", "", 0, command.EstadoPedido, DateTime.Now, "");
+            await _publisherHubService.SendNotification(command.Id, "", "", "", "", "", 0, command.EstadoPedido, DateTime.Now, "");
 
             return Ok(response);
         }
