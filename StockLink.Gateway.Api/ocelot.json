@@ -365,7 +365,7 @@
       "DownstreamScheme": "ws",
       "DownstreamHostAndPorts": [
         {
-          "Host": "stocklink.compra.api",
+          "Host": "stocklink.hubs.api",
           "Port": 8080
         }
       ],
