@@ -37,7 +37,7 @@ namespace StockLink.Compra.Api.Controllers
         }
 
         [HttpGet("Estado")]
-        public async Task<IActionResult> ListPedidoEstado([FromQuery] string codigoCliente, string vendedor, DateTime fechaPedido)
+        public async Task<IActionResult> ListPedidoEstado([FromQuery] string codigoCliente, string vendedor, DateTime fechaPedido, string despacho)
         {
             var response = await _mediator.Send(new GetAllQueryEnviadoQuery() { CodigoCliente = codigoCliente, Vendedor = vendedor, FechaPedido = fechaPedido });
 
@@ -51,7 +51,7 @@ namespace StockLink.Compra.Api.Controllers
 
             var contenido = GenerarContenidoCorreo(NombreCliente!, CodigoCliente!, Observacion!, Correo!);
 
-            await _publisherEmailService.SendNotification("lquiros@motornovacr.com",$"{vendedor}@motornovacr.com",$"Pedido para {CodigoCliente} - {NombreCliente} / vendedor {vendedor}",contenido);
+            await _publisherEmailService.SendNotification($"{despacho}",$"{vendedor}",$"Pedido para {CodigoCliente} - {NombreCliente} / vendedor {vendedor}",contenido);
 
             return Ok(response);
         }
