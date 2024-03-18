@@ -6,5 +6,6 @@
         public string? Username { get; set; }
         public string? Pass { get; set; }
         public int? Rol { get; set; }
+        public string? Despacho { get; set; }
     }
 }

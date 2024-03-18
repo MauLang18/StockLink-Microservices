@@ -12,6 +12,7 @@ namespace StockLink.Compra.Application.UseCase.UseCase.Pedido.Commands.CreateCom
         public string? Vendedor { get; set; }
         public int Cantidad { get; set; }
         public string? Observacion { get; set; }
+        public string? Despacho { get; set; }
         public int EstadoPedido { get; set; }
     }
 }

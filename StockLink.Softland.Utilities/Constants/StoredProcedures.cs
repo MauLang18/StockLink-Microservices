@@ -3,7 +3,7 @@
     public class SP
     {
         #region Articulo
-        public const string paListaArticulo = "paListaArticulo2";
+        public const string paListaArticulo = "paListaArticulo";
         public const string paListaArticuloFamilia = "paListaArticulo3";
         #endregion
 

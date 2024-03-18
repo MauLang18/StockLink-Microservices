@@ -8,5 +8,7 @@ public partial class TbUsuario : BaseEntity
 
     public int Rol { get; set; }
 
+    public string Despacho { get; set; } = null!;
+
     public virtual TbRol RolNavigation { get; set; } = null!;
 }

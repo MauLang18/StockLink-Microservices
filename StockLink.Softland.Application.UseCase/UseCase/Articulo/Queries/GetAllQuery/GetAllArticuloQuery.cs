@@ -9,5 +9,7 @@ namespace StockLink.Softland.Application.UseCase.UseCase.Articulo.Queries.GetAll
         public string? DESC { get; set; }
         public string? PRIV { get; set; }
         public string? ORDER { get; set; }
+        public int DRAINSA { get; set; }
+        public int MOTORNOVA { get; set; }
     }
 }

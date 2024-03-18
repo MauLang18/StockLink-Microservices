@@ -42,7 +42,7 @@ builder.Services.AddMassTransit(conf =>
 
         cfg.ReceiveEndpoint("pedido_hubs_record", e =>
         {
-            e.ConfigureConsumer<ConsumerService>(ctx);
+            e.ConfigureConsumer<PedidoConsumerService>(ctx);
         });
 
         cfg.ConfigureEndpoints(ctx);

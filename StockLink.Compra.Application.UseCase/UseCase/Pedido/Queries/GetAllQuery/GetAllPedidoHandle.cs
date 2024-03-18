@@ -21,7 +21,12 @@ namespace StockLink.Compra.Application.UseCase.UseCase.Pedido.Queries.GetAllQuer
 
             try
             {
-                var pedidos = await _pedidoRepository.GetAllPedidos(SP.paListaPedido, request);
+                var parametros = new
+                {
+                    Despacho = request.Despacho
+                };
+
+                var pedidos = await _pedidoRepository.GetAllPedidos(SP.paListaPedido, parametros);
 
                 if (pedidos is not null)
                 {

@@ -16,6 +16,9 @@ namespace StockLink.Auth.Infrastructure.Persistences.Contexts.Configurations
             builder.Property(e => e.Username)
                 .HasMaxLength(255)
                 .IsUnicode(false);
+            builder.Property(e => e.Despacho)
+                .HasMaxLength(255)
+                .IsUnicode(false);
 
             builder.HasOne(d => d.RolNavigation).WithMany(p => p.TbUsuarios)
                 .HasForeignKey(d => d.Rol)

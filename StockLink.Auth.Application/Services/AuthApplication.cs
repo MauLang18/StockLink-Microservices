@@ -64,10 +64,9 @@ namespace StockLink.Auth.Application.Services
 
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.NameId, usuario.Username!),
+                new Claim(JwtRegisteredClaimNames.NameId, usuario.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.FamilyName, usuario.Username!),
-                new Claim(JwtRegisteredClaimNames.GivenName, usuario.Username!),
-                new Claim(JwtRegisteredClaimNames.UniqueName, usuario.Id.ToString()),
+                new Claim(JwtRegisteredClaimNames.GivenName, usuario.Despacho!),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString())
             };

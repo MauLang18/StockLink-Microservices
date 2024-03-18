@@ -29,9 +29,9 @@ namespace StockLink.Compra.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> ListPedido([FromQuery] int estado)
+        public async Task<IActionResult> ListPedido([FromQuery] string despacho)
         {
-            var response = await _mediator.Send(new GetAllPedidoQuery());
+            var response = await _mediator.Send(new GetAllPedidoQuery() { Despacho = despacho });
 
             return Ok(response);
         }
@@ -61,7 +61,7 @@ namespace StockLink.Compra.Api.Controllers
         {
             var response = await _mediator.Send(command);
 
-            await _publisherHubService.SendNotification(0, command.CodigoCliente!,command.Cliente!,command.CodigoArticulo!,command.Articulo!,command.Vendedor!,command.Cantidad,command.EstadoPedido,DateTime.Now,command.Observacion!);
+            await _publisherHubService.SendNotification(0, command.CodigoCliente!,command.Cliente!,command.CodigoArticulo!,command.Articulo!,command.Vendedor!,command.Cantidad,command.EstadoPedido,DateTime.Now,command.Observacion!,command.Despacho!);
 
             return Ok(response);
         }
@@ -71,7 +71,7 @@ namespace StockLink.Compra.Api.Controllers
         {
             var response = await _mediator.Send(command);
 
-            await _publisherHubService.SendNotification(command.Id, "", "", "", "", "", 0, command.EstadoPedido, DateTime.Now, "");
+            await _publisherHubService.SendNotification(command.Id, "", "", "", "", "", 0, command.EstadoPedido, DateTime.Now, "",command.Despacho!);
 
             return Ok(response);
         }

@@ -7,5 +7,6 @@ namespace StockLink.Compra.Application.UseCase.UseCase.Pedido.Commands.ChangeSta
     {
         public int Id { get; set; }
         public int EstadoPedido { get; set; }
+        public string? Despacho { get; set; }
     }
 }

@@ -26,6 +26,8 @@ namespace StockLink.Softland.Application.UseCase.UseCase.Articulo.Queries.GetAll
                     DESC = request.DESC,
                     PRIV = request.PRIV,
                     ORDER = request.ORDER,
+                    DRAINSA = request.DRAINSA,
+                    MOTORNOVA = request.MOTORNOVA,
                 };
 
                 var exams = await _articuloRepository.GetAllArticulos(SP.paListaArticulo, parametros);

@@ -19,9 +19,9 @@ namespace StockLink.Softland.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> ListArticulos([FromQuery] string desc, string priv, string order)
+        public async Task<IActionResult> ListArticulos([FromQuery] string desc, string priv, string order, string drainsa, string motornova)
         {
-            var response = await _mediator.Send(new GetAllArticuloQuery() { DESC = desc, PRIV = priv, ORDER = order });
+            var response = await _mediator.Send(new GetAllArticuloQuery() { DESC = desc, PRIV = priv, ORDER = order, DRAINSA = Convert.ToInt32(drainsa), MOTORNOVA = Convert.ToInt32(motornova) });
 
             return Ok(response);
         }

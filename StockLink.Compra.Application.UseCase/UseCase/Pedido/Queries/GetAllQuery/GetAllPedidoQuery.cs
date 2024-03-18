@@ -6,5 +6,6 @@ namespace StockLink.Compra.Application.UseCase.UseCase.Pedido.Queries.GetAllQuer
 {
     public class GetAllPedidoQuery : IRequest<BaseResponse<IEnumerable<GetAllPedidoResponseDto>>>
     {
+        public string? Despacho { get; set; }
     }
 }

@@ -5,12 +5,12 @@ using StockLink.Shared.Entities;
 
 namespace StockLink.Hubs.Api.Services
 {
-    public class ConsumerService : IConsumer<PedidoHubRecord>
+    public class PedidoConsumerService : IConsumer<PedidoHubRecord>
     {
-        private readonly ILogger<ConsumerService> _logger;
+        private readonly ILogger<PedidoConsumerService> _logger;
         private readonly IHubContext<StockLinkHubs> _hubContext;
 
-        public ConsumerService(ILogger<ConsumerService> logger, IHubContext<StockLinkHubs> hubContext)
+        public PedidoConsumerService(ILogger<PedidoConsumerService> logger, IHubContext<StockLinkHubs> hubContext)
         {
             _logger = logger;
             _hubContext = hubContext;
@@ -22,11 +22,11 @@ namespace StockLink.Hubs.Api.Services
 
             if (context.Message.Id == 0)
             {
-                _hubContext.Clients.All.SendAsync("PedidoRegistrado", context.Message);
+                _hubContext.Clients.Group(context.Message.Despacho).SendAsync("PedidoRegistrado", context.Message);
             }
             else
             {
-                _hubContext.Clients.All.SendAsync("PedidoActualizado", context.Message);
+                _hubContext.Clients.Group(context.Message.Despacho).SendAsync("PedidoActualizado", context.Message);
             }
 
             return Task.CompletedTask;
